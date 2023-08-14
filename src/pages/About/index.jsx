@@ -10,7 +10,7 @@ const About = () => {
             titulo='Sobre mim'
         >
             <h3 className={styles.subtitulo}>Aloha!</h3>
-            <img src={fotoSobreMim} alt="" className={styles.fotoSobreMim}/>
+            <img src="https://github.com/sofiabareta.png" alt="" className={styles.fotoSobreMim}/>
             <p className={styles.paragrafo}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor accusamus totam eveniet recusandae distinctio vitae ut magni sit laboriosam voluptatem corporis molestias, culpa tempora amet quam est. Atque, voluptates temporibus.</p>
             <p className={styles.paragrafo}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor accusamus totam eveniet recusandae distinctio vitae ut magni sit laboriosam voluptatem corporis molestias, culpa tempora amet quam est. Atque, voluptates temporibus.</p>
             <p className={styles.paragrafo}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor accusamus totam eveniet recusandae distinctio vitae ut magni sit laboriosam voluptatem corporis molestias, culpa tempora amet quam est. Atque, voluptates temporibus.</p>
