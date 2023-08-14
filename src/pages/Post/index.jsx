@@ -5,6 +5,7 @@ import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import './Post.css'
 import NotFound from "pages/NotFound";
 import PostCard from "components/PostCard";
+import DefaultPage from "components/DefaultPage";
 
 const Post = () => {
     const params = useParams()
@@ -22,25 +23,28 @@ const Post = () => {
         .slice(0, 4)
 
     return (
-        <RefPost
-            fotoCapa={`/assets/posts/${post.id}/capa.png`}
-            titulo={post.titulo}
-        >
-            <div className="post-markdown-container">
-                <ReactMarkdown>
-                    {post.texto}
-                </ReactMarkdown>
-            </div>
+        <DefaultPage>
 
-            <h2>Você também pode gostar</h2>
-            <ul style={{ display: "flex", justifyContent: "space-between"}}>
-                {
-                    recommendedPosts.map(post => (
-                        <PostCard post={post} />
-                    ))
-                }
-            </ul>
-        </RefPost>
+            <RefPost
+                fotoCapa={`/assets/posts/${post.id}/capa.png`}
+                titulo={post.titulo}
+            >
+                <div className="post-markdown-container">
+                    <ReactMarkdown>
+                        {post.texto}
+                    </ReactMarkdown>
+                </div>
+
+                <h2>Você também pode gostar</h2>
+                <ul style={{ display: "flex", justifyContent: "space-between"}}>
+                    {
+                        recommendedPosts.map(post => (
+                            <PostCard post={post} />
+                        ))
+                    }
+                </ul>
+            </RefPost>
+        </DefaultPage>
               
     );
 }
